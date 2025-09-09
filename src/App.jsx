@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "./App.css";
 function App() {
   const [amount, setAmount] = useState("");
   const [discount, setDiscount] = useState("");
@@ -13,7 +13,10 @@ function App() {
   };
 
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
+    <div
+      style={{ textAlign: "center", marginTop: "50px" }}
+      className="container"
+    >
       <h1>Bill & Discount Calculator</h1>
 
       <input
@@ -23,7 +26,6 @@ function App() {
         onChange={(e) => setAmount(e.target.value)}
         style={{ margin: "10px", padding: "10px" }}
       />
-      <br />
 
       <input
         type="number"

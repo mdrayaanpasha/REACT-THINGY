@@ -1,57 +1,86 @@
+/* Global Styles */
 body {
-  background-color: #121212;
+  background: #121212;
   color: #e0e0e0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  margin: 0;
 }
 
-.container {
-  background-color: #1e1e1e;
-  padding: 30px;
-  margin-top: 20px;
-  border: 1px solid #333;
-  border-radius: 15px;
-  box-shadow: 0 0 25px rgba(0, 123, 255, 0.1);
+.calculator {
+  background: #1f1f1f;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(255, 140, 0, 0.2),
+              0 -5px 15px rgba(0, 0, 0, 0.3);
+  width: 350px;
+  max-width: 90%;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  color: #ffb347; /* warm orange */
+}
+
+.input-group {
+  margin-bottom: 20px;
 }
 
 input {
   width: 100%;
-  padding: 12px;
-  background-color: #2c2c2c;
-  border: 2px solid #444;
-  border-radius: 10px;
+  padding: 15px;
+  border-radius: 12px;
+  border: none;
   font-size: 1rem;
   color: #e0e0e0;
-  box-sizing: border-box;
-  transition: border-color 0.3s ease;
+  background: #2a2a2a;
+  box-shadow: inset 2px 2px 5px rgba(0,0,0,0.5),
+              inset -2px -2px 5px rgba(255,255,255,0.05);
+  transition: all 0.3s ease;
 }
 
 input:focus {
-  border-color: #007bff;
   outline: none;
+  box-shadow: 0 0 0 3px #ff7e5f, inset 2px 2px 5px rgba(0,0,0,0.5);
 }
 
 button {
   width: 100%;
-  color: #ffffff;
-  margin-top: 20px;
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 12px;
   border: none;
-  border-radius: 10px;
-  font-size: 1.25rem;
-  font-weight: bold;
-  padding: 12px;
-  background-color: #007bff;
-  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+  background: linear-gradient(145deg, #ff7e5f, #feb47b); /* orange-pink gradient */
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(255, 140, 0, 0.4);
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 button:hover {
-  background-color: #0056b3;
-  cursor: pointer;
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(255, 140, 0, 0.5);
+}
+
+.result {
+  margin-top: 25px;
+  background: #2a2a2a;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: inset 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.result h2 {
+  margin: 0;
+  color: #ff6f61; /* matching coral tone */
 }
